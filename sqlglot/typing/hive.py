@@ -17,6 +17,7 @@ EXPRESSION_METADATA = {
         for expr_type in {
             exp.Corr,
             exp.MonthsBetween,
+            exp.Nanvl,
         }
     },
     **{
@@ -65,6 +66,7 @@ EXPRESSION_METADATA = {
             exp.First,
             exp.Last,
             exp.Reverse,
+            exp.Shuffle,
         }
     },
     exp.ApproxQuantile: {"annotator": lambda self, e: self._annotate_by_args(e, "quantile")},
